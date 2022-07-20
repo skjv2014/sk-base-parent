@@ -5,7 +5,7 @@
 
     <groupId>com.sikejava.framework.parent</groupId>
     <artifactId>sk-base-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <packaging>pom</packaging>
 
@@ -34,6 +34,10 @@
             <url>https://github.com/skjv2014</url>
         </developer>
     </developers>
+
+    <modules>
+        <module>sk-maven-base-parent</module>
+    </modules>
 
     <properties>
         <!-- ############################## 基本配置 ############################## -->

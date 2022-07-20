@@ -1,2 +1,1 @@
-# sk-base-parent
-sk base parent
+maven pom的一系列基础parent

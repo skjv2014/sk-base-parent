@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sikejava.framework.parent</groupId>
+        <artifactId>sk-base-parent</artifactId>
+        <version>1.1.0</version>
+    </parent>
+
+    <artifactId>sk-maven-base-parent</artifactId>
+
+    <packaging>pom</packaging>
+
+    <name>sk-maven-base-parent</name>
+    <description>sk maven base parent</description>
+    <url>http://www.sikejava.com</url>
+
+    <modules>
+        <module>sk-maven-extension-parent</module>
+        <module>sk-maven-plugin-parent</module>
+    </modules>
+
+    <properties>
+        <maven.install.skip>false</maven.install.skip>
+
+        <maven.version>3.6.3</maven.version>
+        <maven.annotations.version>3.6.0</maven.annotations.version>
+        <plexus.version>2.1.0</plexus.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- maven-core -->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-core</artifactId>
+                <version>${maven.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- maven-artifact -->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-artifact</artifactId>
+                <version>${maven.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- maven-plugin-tools-annotations -->
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-tools-annotations</artifactId>
+                <version>${maven.annotations.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- plexus-component-annotations -->
+            <dependency>
+                <groupId>org.codehaus.plexus</groupId>
+                <artifactId>plexus-component-annotations</artifactId>
+                <version>${plexus.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- maven-plugin-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>3.6.0</version>
+                </plugin>
+                <!-- plexus-component-metadata -->
+                <plugin>
+                    <groupId>org.codehaus.plexus</groupId>
+                    <artifactId>plexus-component-metadata</artifactId>
+                    <version>2.1.0</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate-metadata</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
