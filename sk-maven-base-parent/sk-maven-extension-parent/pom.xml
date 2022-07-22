@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.sikejava.framework.parent</groupId>
         <artifactId>sk-maven-base-parent</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
     </parent>
 
     <artifactId>sk-maven-extension-parent</artifactId>

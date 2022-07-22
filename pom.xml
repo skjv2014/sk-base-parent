@@ -5,7 +5,7 @@
 
     <groupId>com.sikejava.framework.parent</groupId>
     <artifactId>sk-base-parent</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 
     <packaging>pom</packaging>
 
@@ -140,6 +140,16 @@
                 </executions>
                 <configuration>
                     <skip>${maven.javadoc.skip}</skip>
+                    <additionalOptions>
+                        <additionalOption>-Xdoclint:none</additionalOption>
+                    </additionalOptions>
+                    <tags>
+                        <tag>
+                            <name>date</name>
+                            <placement>a</placement>
+                            <head>创建时间</head>
+                        </tag>
+                    </tags>
                 </configuration>
             </plugin>
             <!-- 版本 -->
